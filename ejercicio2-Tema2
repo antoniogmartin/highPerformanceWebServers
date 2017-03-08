@@ -1,0 +1,33 @@
+
+1) PM2
+
+Manejador de producción para aplicaciones node.js con balanceador de carga. Permite mantener aplicaciones vivas "para siempre", recargar sin downtime y facilitar tareas
+de administración comunes
+
+2) MIMIX AVAILABILITY
+
+Protege tu negocio minimizando el tiempo de no disponibilidad y perdida de datos
+La mayor velocidad de duplicación y auditoría que ofrece MIMIX Availability 7.1 sube el listón del rendimiento para dar soporte a los requisitos de escalabilidad y de RTO y RPO más exigentes. 
+
+ El rendimiento de la duplicación de MIMIX Availability ha mejorado considerablemente en la versión 7.1 para todos los usuarios, con avances realmente extraordinarios en ciertos entornos.
+
+    Todos los usuarios de MIMIX se beneficiarán de las mejoras en el rendimiento del lector de anotaciones.
+    Los clientes con múltiples grupos de datos verán una importante mejora en el tiempo necesario para leer el diario de auditoría de seguridad gracias a la reducción en la competencia por los recursos.
+    Los clientes que tengan ciclos de compromiso largos observarán mejoras adicionales ya que se pueden aplicar durante el ciclo de compromiso.
+    Los entornos que ejecutan aplicaciones que retrotraen cambios a menudo cuando los usuarios cancelan transacciones en curso se beneficiarán de las mejoras en el proceso de retrotracción de compromisos dentro del proceso de aplicación de MIMIX.
+    Los clientes que establezcan bloqueos en su base de datos de destino experimentarán tiempos de recuperación más rápidos gracias al proceso en paralelo de las operaciones de establecimiento y liberación de bloqueos de MIMIX.
+    Los grupos de datos se inician más deprisa después de una recuperación en entornos IFS grandes.
+
+Auditorías priorizadas rápidas y eficaces
+
+La inclusión de la auditoría basada en prioridades permite que éstas se ejecuten de manera más rápida y eficaz.
+
+    La frecuencia de las auditorías es personalizable
+    Configuración de auditorías independientes para objetos en función de la frecuencia de las modificaciones (nuevos, modificados o no modificados) y el historial de la auditoría
+    El resultado final es que las auditorías se ejecutan de manera más rápida y eficaz
+
+3) Solaris Cluster Geographic Edition
+
+Es un framework que permite a dos cluster Solaris ser manejados como una unidad, en conjunción con uno o más productos de replicación de datos, para proveer de recuperación frente a desastres. Asegurandonos que las actualizaciones de datos son continuamente replicados a un sitio remoto, este sitio puede rapidamente encargarse de proveer un
+servicio en el caso de que el site principal  se haya perdido como resultado de un desastre.
+

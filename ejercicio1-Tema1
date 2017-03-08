@@ -1,0 +1,78 @@
+Ejercicio 1
+
+1) APACHE
+Apache es usado principalmente para enviar páginas web estáticas y dinámicas en la World Wide Web. Muchas aplicaciones web están diseñadas asumiendo como ambiente de implantación a Apache, o que utilizarán características propias de este servidor web.
+
+Apache es el componente de servidor web en la popular plataforma de aplicaciones LAMP, junto a MySQL y los lenguajes de programación PHP/Perl/Python.
+
+Los servidores Apache pueden manejar contenido estático usando sus métodos convencionales basados en archivos. La ejecución de estas operaciones es principalmente una función de los métodos MPM.
+
+Apache crea hilos y sub-hilos para manejar conexiones adicionales. El administrador puede configurar el servidor para controlar el número máximo de hilos permitidos. Esta configuración varía dependiendo de la memoria disponible en la máquina.
+Demasiados procesos en memoria hace que el rendimiento se vea gravemente disminuido. 
+
+El factor limitante en Apache es la memoria y el potencial de hilos-muertos que se contengan en la memoria. Si se detiene un hilo, el usuario espera a que la página web aparezca, hasta que el proceso se libere, para que puede enviar la página nuevamente. Si un proceso se estanca, no sabe cómo reiniciar, quedando así atrapados.
+
+Empresas que usan Apache para sus servidores web:
+Cisco, IBM, Salesforce, General Electric, Adobe, Google, VMware, Xerox, LinkedIn,Facebook, Hewlett-Packard, AT&T, Siemens ...
+
+
+2) NGINX
+
+Nginx no interpreta archivos .htaccess ni provee de ningún mecanismo para la evaluar la configuración por directorio fuera del archivo de la configuración principal. Esto quizá sea menos flexible que el modelo Apache, pero también tiene sus propias ventajas.
+
+Una de esas ventajas es su relación con la seguridad. La distribución del acceso a la configuración a un nivel de directorio también distribuye la responsabilidad de la seguridad a los usuarios individuales, en los que quizá no se debería confiar para realizar esta tarea bien. Asegurándose de que el administrador mantiene el control sobre todo el servidor web, puede prevenir algunos fallos de seguridad que pueden ocurrir cuando se da acceso a terceras partes.
+
+Empresas que usan NGINX:
+
+Empresas como Facebook y WordPress.com, lo utilizan porque la arquitectura asíncrona del servidor web deja una pequeña huella de memoria y bajo consumo de recursos, haciéndolo ideal para el manejo de múltiples y cambiantes activas páginas Web.
+Esa es una tarea difícil. Es así como NGINX puede soportar cientos de millones de usuarios de Facebook.
+
+Nginx también es utilizado por grandes empresas de internet como: tumblr, Instagram, Yahoo, YouTube, Pinterest, Zynga, SourceForge, GitHub, DropBox, Intel, NetFlix, entre otras
+
+http://latamdigital.softtek.co/combate-entre-servidores-web-nginx-vs-apache
+https://clouding.io/blog/apache-nginx/
+
+3)THTTPD
+
+Se caracteriza por ser simple, pequeño, portátil, rápido, y seguro, ya que utiliza los requerimientos mínimos de un servidor HTTP. Esto lo hace ideal para servir grandes volúmenes de información estática.
+Este es generado por la necesidad de obtener un software para servidores con un tráfico bajo y medio, ya que no son requeridas las aplicaciones utilizadas en altos niveles, lo que generan una baja tasa de transferencia.
+
+Características:
+    Simple, porque esto maneja solo el mínimo necesario para poner en práctica el protocolo HTTP, algunas veces un poco más que el mínimo.
+    Pequeño, porque esto también tiene un pequeño tamaño de período de explotación, ya que esto no se divide en dos partes y es muy cuidadoso sobre la asignación de memoria.
+    Portátil, porque esto se compila limpiamente sobre la mayoría de sistemas operativos, expresamente incluyendo FreeBSD, SunOS 4, Solaris 2, BSD/OS, GNU/Linux, OSF.
+    Rápido, porque en el empleo típico es sobre todo más rápido que los mejores servidores "destacados" (Apache), y bajo la carga extrema es mucho más rápido.
+    Seguro, porque este se extiende a grandes longitudes para proteger el servidor Web contra ataques de otros sitios.
+
+Uso: Sobre todo servidores personales
+
+
+4)CHEROKEE
+
+Cherokee es un servidor web multiplataforma. Su objetivo es ser rápido y completamente funcional, sin dejar de ser liviano comparado con otros servidores web.Está escrito completamente en C. Puede usarse como un sistema embebido y soporta complementos para aumentar sus funcionalidades. Es software libre, disponible bajo la Licencia Pública General de GNU.
+
+Estudios independientes han mostrado que Cherokee tiene mejor rendimiento que Apache cuando sirve contenido estático y dinámico: http://blog.dynamichosting.biz/2011/04/07/cherokee-vs-apache-benchmarks/
+
+Durante los últimos años  Cherokee ha sido adoptado por numerosos fabricantes de tecnología IoT. Por ejemplo camaras Xiaomi ,GoPro, kits de IoT, camaras de Seguridad...
+
+5) NODE.JS
+
+Node.js es un entorno Javascript del lado del servidor, basado en eventos. Node ejecuta javascript utilizando el motor V8, desarrollado por Google para uso de su navegador Chrome. Aprovechando el motor V8 permite a Node proporciona un entorno de ejecución del lado del servidor que compila y ejecuta javascript a velocidades increíbles. El aumento de velocidad es importante debido a que V8 compila Javascript en código de máquina nativo, en lugar de interpretarlo o ejecutarlo como bytecode 
+
+Javascript tiene la ventaja de poseer un excelente modelo de eventos, ideal para la programación asíncrona. Javascript también es un lenguaje omnipresente, conocido por millones de desarrolladores. Esto reduce la curva de aprendizaje de Node,js, ya que la mayoría de los desarrolladores no tendrán que aprender un nuevo lenguaje para empezar a construir aplicaciones usando Node.js.
+
+    La meta número uno declarada de Node es “proporcionar una manera fácil para construir programas de red escalables”.
+
+¿Cuál es el problema con los programas de servidor actuales? Hagamos cuentas.En lenguajes como Java™ y PHP, cada conexión genera un nuevo hilo que potencialmente viene acompañado de 2 MB de memoria. En un sistema que tiene 8 GB de RAM, esto da un número máximo teórico de conexiones concurrentes de cerca de 4.000 usuarios. A medida que crece su base de clientes, si usted desea que su aplicación soporte más usuarios, necesitará agregar más y más servidores. Por todas estas razones, el cuello de botella en toda la arquitectura de aplicación Web (incluyendo el rendimiento del tráfico, la velocidad de procesador y la velocidad de memoria) era el número máximo de conexiones concurrentes que podía manejar un servidor.
+
+Node resuelve este problema cambiando la forma en que se realiza una conexión con el servidor. En lugar de generar un nuevo hilo de OS para cada conexión (y de asignarle la memoria acompañante), cada conexión dispara una ejecución de evento dentro del proceso del motor de Node. Node también afirma que nunca se quedará en punto muerto, porque no se permiten bloqueos y porque no se bloquea directamente para llamados E/S.
+
+Node afirma que un servidor que lo ejecute puede soportar decenas de miles de conexiones concurrentes.
+
+Lo que Node definitivamente no es
+
+Node es un programa de servidor. Sin embargo, el producto base de Node definitivamente No es como Apache o Tomcat.
+
+Esos servidores básicamente son productos para servidor listos para instalar y que están listos para implementar aplicaciones instantáneamente. Usted podría tener un servidor estar listo y en operación en un minuto con estos productos. Node definitivamente no es esto. 
+
+http://www.netconsulting.es/blog/nodejs/
