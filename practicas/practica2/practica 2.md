@@ -7,7 +7,7 @@
 
     1. Antes de nada debemos editar el archivo /etc/ssh/sshd_config
 	En este archivo deberemos cambiar la linea a:
-	 *PermitRootLogin yes*   
+	 **PermitRootLogin yes**  
 
     2. Ahora podremos ejecutar la orden  
 
