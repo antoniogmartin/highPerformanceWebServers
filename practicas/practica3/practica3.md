@@ -2,7 +2,7 @@
 ## Práctica 3
 
 
-**Paso 1:**Configurando nginx:
+**Paso 1:** Configurando nginx:
 
 Editar el archivo `/etc/nginx/sites-available/default` y poner el contenido
 
@@ -56,18 +56,24 @@ sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 
 Desde la maquina anfitriona ejecutamos el comando:
 
-ab -n 8000 -c 10 http://<ip_balanceador>/index.html
+`ab -n 8000 -c 10 http://<ip_balanceador>/index.html`
 y obtenemos el resultado:
-[foto]
+
+![Haproxi_benchmark](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica3/images/balanceo-haproxi1.png)
 
 Es importante para ejecutar el balanceo con nginx debemos matar el proceso haproxy:
  Buscamos el pid del proceso y lo matamos
-  $ps aux | grep haproxy
-  $ kill -9 pid_haproxy
+  ```$ps aux | grep haproxy
+  $ kill -9 pid_haproxy```
 
  Ahora ejecutamos de nuevo el benchmark:
- ab -n 8000 -c 10 http://<ip_balanceador>/index.html
+`ab -n 8000 -c 10 http://<ip_balanceador>/index.html`
 
+![nginx_benchmark](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica3/images/balanceo-nginx1.png)
+
+pound balancer:
+
+![pound_benchmark](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica3/images/pound_balancer.png)
 
 **Paso 4:** Extra Pound balancer
 
@@ -96,7 +102,7 @@ End
  Reiniciamos el servicio `sudo /etc/init.d/pound restart`
 
  Tras esto en el navegador de nuestra máquina anfitrión tecleamos la ip  del balanceador y debería mostrarnos el archivo index.html de la máquina 1
- 
+
 
 
 
