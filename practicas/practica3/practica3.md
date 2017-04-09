@@ -64,7 +64,8 @@ y obtenemos el resultado:
 Es importante para ejecutar el balanceo con nginx debemos matar el proceso haproxy:
  Buscamos el pid del proceso y lo matamos
   ```$ps aux | grep haproxy
-  $ kill -9 pid_haproxy```
+  $ kill -9 pid_haproxy
+  ```
 
  Ahora ejecutamos de nuevo el benchmark:
 `ab -n 8000 -c 10 http://<ip_balanceador>/index.html`
