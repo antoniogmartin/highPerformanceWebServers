@@ -28,7 +28,7 @@ access_log /var/log/nginx/balanceador.access.log; error_log /var/log/nginx/balan
 **Paso 2** Para configurar haproxy:
 
 
-Primeramente debemos para el servicio nginx que está escuchando en el puerto 80
+Primeramente debemos parar el servicio nginx que está escuchando en el puerto 80
 
 service  nginx stop
 despues incluimos en el archivo:
