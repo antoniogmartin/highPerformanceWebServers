@@ -13,7 +13,7 @@
 /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
 ```
 
-[foto]
+![generar certificado](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica4/generar-certificados.png)
 
 
 **1.4Editamos el archivo de configuración del sitio**
@@ -52,7 +52,7 @@ server{
 
 
 Visualización desde el navegador del certificado:
-[foto]
+![vision certificado web](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica4/vision-cert-web.png)
 ### Paso 2: Configuración cortafuegos
 
 **2.1 Creación del script iptable**
