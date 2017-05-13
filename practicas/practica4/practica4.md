@@ -50,6 +50,9 @@ server{
 }
 ```
 
+
+Visualización desde el navegador del certificado:
+[foto]
 ### Paso 2: Configuración cortafuegos
 
 **2.1 Creación del script iptable**
