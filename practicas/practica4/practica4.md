@@ -153,7 +153,7 @@ iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
 
 
 # Cambia la dirección de destino por 5.6.7.8
- iptables -t nat -A PREROUTING  -p tcp --dport 80 -j DNAT --to-destination 172.16.136.135:80
- iptables -t nat -A POSTROUTING -p tcp -d 172.16.136.135 --dport 80 -j SNAT --to-source 172.16.136.137
+ iptables -t nat -A PREROUTING  -p tcp --dport 80 -j DNAT --to-destination <ip_destino>:80
+ iptables -t nat -A POSTROUTING -p tcp -d <ip_destino> --dport 80 -j SNAT --to-source <ip_origen>
 
 ```
