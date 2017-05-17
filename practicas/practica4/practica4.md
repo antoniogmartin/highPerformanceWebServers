@@ -98,14 +98,15 @@ Al instalar el paquete nos preguntará si queremos guardar la configuración act
   ` sudo apt-get install iptables-persistent`
 
 
- Si en algún momento queremos cambiar la configuración del cortafuegos y que se aplique en cada reinicio debemos ejecutar:
-	`dpkg-reconfigure iptables-persistent`
-
 
 
 **2.2 Creamos un tarea cron para usuario root y así realizar el proceso en cada inicio de la máquina**
 
-Primeramente especificar archivo con formato crontab que contiene la lista de trabajos para cron `$crontab <file>`
+Opcion A) Si en algún momento queremos cambiar la configuración del cortafuegos y que se aplique en cada reinicio debemos ejecutar:
+	`dpkg-reconfigure iptables-persistent`
+
+
+Opcion B) Primeramente especificar archivo con formato crontab que contiene la lista de trabajos para cron `$crontab <file>`
 
 Editar archivo crontab : `$crontab -e`
 
