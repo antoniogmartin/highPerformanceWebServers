@@ -25,6 +25,7 @@
 
 1.6 Editamos fstab añadiendo la línea del dispositivo RAID
 
+  `UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0`
 1.7 Reiniciamos la máquina
 
 ## 2.Simular un fallo en uno de los discos del RAID, comprobar que se puede acceder a la información y comprobar que se reconstruye correctamente.
@@ -45,6 +46,7 @@
 `sudo mdadm --manage --add /dev/md0 /dev/sdb`
 
 Detalle md127:
+
 ![detalle md127 ](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica6/imagenes/detalle_md127.png)
 
 ##  3. Configuracion servidor NFS
@@ -63,12 +65,14 @@ Detalle md127:
   `exportfs -a`
 
 ![exports_a](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica6/imagenes/exports_a.png)
+
 Con el comando anterior exportaremos home.
 
 3.4 comprobamos que  con showmount -e que está correctamente
 exportado.
 
 ![showmount](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica6/imagenes/showmount.png)
+
 3.5 Ahora iniciamos el servidor NFS.
 
 `sudo systemctl start nfs-kernel-server.service`
