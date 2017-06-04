@@ -36,7 +36,7 @@ mysql> FLUSH TABLES WITH READ LOCK;`
 
 2.3 Copiar datos BD de la maquina1 a la 2.
 
-![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/restaurar_copia_m2.png)
+![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/%20copiar_bd.png)
 
 `scp maquina1:/tmp/<bd_ejemplo>sql /tmp/`
 
@@ -48,7 +48,7 @@ mysql> FLUSH TABLES WITH READ LOCK;`
 
 3.2 Salir de mysql y restaurar
 `mysql -u root -p ejemplodb < /tmp/ejemplodb.sql`
-![restaurar copia en m2](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/restaurar_copia_m2.png)
+![restaurar copia en m2](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/restaurar_copia_m2.png)
 
 ## 4  Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.
 
@@ -94,7 +94,7 @@ MASTER_LOG_POS=<POSITION>, MASTER_PORT=3306;
 `mysql>START SLAVE;`
 
 4.7 Comprobamos que Seconds_Behind_Master=0
-![Seconds_Behind_Master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/seconds_slave.png)
+![Seconds_Behind_Master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/seconds_slave.png)
 
 4.8 Dado que mi maquina2 es un clon de maquina1 he tenido que eliminar el archivo **/var/lib/mysql/auto.cnf** y con touch volverlo a crear.
 
@@ -120,7 +120,7 @@ MASTER_LOG_FILE='<datos_bd_maquina1-bin.00000n>',
 MASTER_LOG_POS=<POSITION>, MASTER_PORT=3306;
 ```
 5.3 escribimos : `mysql>show master status`
-![estado master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/master_bd_data.png)
+![estado master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/master_bd_data.png)
 En la máquina1
 
 5.4 `MYSQL> stop slave;`
@@ -132,5 +132,5 @@ MASTER_USER='esclavo', MASTER_PASSWORD='esclavo',
 MASTER_LOG_FILE='<datos_bd_maquina1-bin.00000n>',
 MASTER_LOG_POS=<POSITION>, MASTER_PORT=3306;
 ```
-![de master a master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/mater_to_master.png)
+![de master a master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/mater_to_master.png)
 Ya tenemos una relación master - master.
