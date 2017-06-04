@@ -94,7 +94,7 @@ MASTER_LOG_POS=<POSITION>, MASTER_PORT=3306;
 `mysql>START SLAVE;`
 
 4.7 Comprobamos que Seconds_Behind_Master=0
-![Seconds_Behind_Master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/restaurar_copia_m2.png)
+![Seconds_Behind_Master](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/seconds_slave.png)
 
 4.8 Dado que mi maquina2 es un clon de maquina1 he tenido que eliminar el archivo **/var/lib/mysql/auto.cnf** y con touch volverlo a crear.
 
