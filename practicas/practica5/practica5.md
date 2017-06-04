@@ -8,7 +8,7 @@
 
 `create listado_telefonico(id int(6) AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100),TLF INT);`
 	
-![crear tabla](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/crear_tabla.png)
+![crear tabla](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/crear_tabla.png)
 
 1.3 Añadir datos
 
@@ -18,11 +18,11 @@
 
 `select * from listado_telefonico`
 
-![select tabla](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/select_tabla.png)
+![select tabla](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/select_tabla.png)
 1.5 Describe datos
 
 `describe listado_telefonico`
-![mostrar datos](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/describe_tabla.png)
+![mostrar datos](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/describe_tabla.png)
 
 ## 2 Realizar la copia de seguridad de la BD completa usando mysqldump.
 
@@ -36,7 +36,7 @@ mysql> FLUSH TABLES WITH READ LOCK;`
 
 2.3 Copiar datos BD de la maquina1 a la 2.
 
-![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/crear_tabla.png)
+![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/restaurar_copia_m2.png)
 
 `scp maquina1:/tmp/<bd_ejemplo>sql /tmp/`
 
