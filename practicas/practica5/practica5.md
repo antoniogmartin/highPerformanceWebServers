@@ -36,7 +36,7 @@ mysql> FLUSH TABLES WITH READ LOCK;`
 
 2.3 Copiar datos BD de la maquina1 a la 2.
 
-![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica%205/imagenes/%20copiar_bd.png)
+![copia bd](https://github.com/antoniogmartin/highPerformanceWebServers/blob/master/practicas/practica5/imagenes/crear_tabla.png)
 
 `scp maquina1:/tmp/<bd_ejemplo>sql /tmp/`
 
