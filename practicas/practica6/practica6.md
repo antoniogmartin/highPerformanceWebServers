@@ -23,8 +23,7 @@
 
 1.7 Reiniciamos la máquina
 
-## 2.Simular un fallo en uno de los discos del RAID, comprobar que se puede
-acceder a la información y comprobar que se reconstruye correctamente.
+## 2.Simular un fallo en uno de los discos del RAID, comprobar que se puede acceder a la información y comprobar que se reconstruye correctamente.
 
 2.1 Provocamos fallo
 
@@ -68,6 +67,6 @@ exportado.
 
 `sudo apt install nfs-common`
 
-3.7 Montamos el directorio de la maquina 1 en la maquina2
+3.8 Montamos el directorio de la maquina 1 en la maquina2
 
 `sudo mount <hostname>/home /home/example`
